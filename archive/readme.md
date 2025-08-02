@@ -1,8 +1,8 @@
-# VOCALIZEN - Landing Page Agent Vocal IA pour Entreprises
+# VOCALIZEN - Landing Page Agent Vocal IA pour Dentistes
 
 ## 📋 Description
 
-Landing page moderne et optimisée pour VOCALIZEN, un agent vocal IA spécialement conçu pour les cabinets dentaires et entreprises. Design professionnel avec animations subtiles et contenu ultra-ciblé pour convertir.
+Landing page moderne et optimisée pour VOCALIZEN, un agent vocal IA spécialement conçu pour les cabinets dentaires. Design professionnel avec animations subtiles et contenu ultra-ciblé pour convertir les dentistes.
 
 ## 🚀 Caractéristiques
 

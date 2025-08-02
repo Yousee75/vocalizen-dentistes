@@ -1,0 +1,96 @@
+/* ===== MOBILE FIXES ===== */
+/* Ajoutez ce fichier après animations.css dans index.html */
+
+/* Fix alignement mobile */
+@media (max-width: 768px) {
+    /* Hero mobile optimisé */
+    .hero {
+        padding: 100px 15px 60px;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    
+    /* Badges de confiance empilés */
+    .trust-badge {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+    
+    /* Cards problèmes full width */
+    .problem-card {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    
+    /* Features cards centrées */
+    .features-grid {
+        padding: 0 10px;
+    }
+    
+    .feature-card {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    
+    /* FAQ mobile friendly */
+    .faq-question {
+        font-size: 1rem;
+        padding: 1.2rem;
+    }
+    
+    .faq-answer {
+        font-size: 0.95rem;
+    }
+    
+    /* CTA mobile */
+    .cta-button {
+        display: block;
+        width: 90%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    /* Steps sans lignes */
+    .step {
+        margin-bottom: 1rem;
+    }
+    
+    /* Final CTA ajusté */
+    .final-cta {
+        padding: 60px 15px;
+    }
+    
+    .final-cta h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 375px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .problem-card,
+    .feature-card {
+        padding: 1.5rem;
+    }
+    
+    .cta-button {
+        font-size: 0.95rem;
+        padding: 0.8rem 1.5rem;
+    }
+}

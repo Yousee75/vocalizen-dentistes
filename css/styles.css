@@ -289,6 +289,10 @@ h1 .highlight {
     border-radius: 12px;
     transition: all 0.3s ease;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 320px;
 }
 
 .feature-card::before {
@@ -320,10 +324,13 @@ h1 .highlight {
     font-size: 1.3rem;
     margin-bottom: 0.8rem;
     color: var(--dark);
+    min-height: 2em;
 }
 
 .feature-desc {
     color: var(--gray);
+    flex-grow: 1;
+    margin-bottom: 1rem;
 }
 
 .benefit-tag {
@@ -333,7 +340,7 @@ h1 .highlight {
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     font-size: 0.9rem;
-    margin-top: 1rem;
+    margin-top: auto;
     font-weight: 500;
 }
 
@@ -355,6 +362,15 @@ h1 .highlight {
     text-align: center;
     position: relative;
     padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
 }
 
 .step-number {
@@ -373,15 +389,15 @@ h1 .highlight {
     z-index: 2;
 }
 
-.step:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    top: 3rem;
-    left: 50%;
-    width: 100%;
-    height: 2px;
-    background: var(--primary);
-    opacity: 0.2;
+.step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--dark);
+}
+
+.step p {
+    color: var(--gray);
+    line-height: 1.6;
 }
 
 /* ===== FAQ SECTION ===== */
@@ -401,10 +417,12 @@ h1 .highlight {
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease;
+    border: 1px solid #E5E7EB;
 }
 
 .faq-item:hover {
     box-shadow: var(--shadow-sm);
+    border-color: var(--primary);
 }
 
 .faq-question {
@@ -415,10 +433,12 @@ h1 .highlight {
     align-items: center;
     font-weight: 600;
     transition: all 0.3s ease;
+    background: white;
+    font-size: 1.1rem;
 }
 
 .faq-question:hover {
-    background: #E2E8F0;
+    background: #F3F4F6;
 }
 
 .faq-answer {
@@ -426,15 +446,18 @@ h1 .highlight {
     max-height: 0;
     overflow: hidden;
     transition: all 0.3s ease;
+    background: var(--light);
 }
 
 .faq-item.active .faq-answer {
-    max-height: 300px;
+    max-height: 500px;
     padding: 0 1.5rem 1.5rem;
 }
 
 .faq-icon {
     transition: transform 0.3s ease;
+    font-size: 1.2rem;
+    color: var(--primary);
 }
 
 .faq-item.active .faq-icon {
@@ -508,23 +531,39 @@ h1 .highlight {
         flex-direction: column;
         padding: 20px;
         box-shadow: var(--shadow);
+        z-index: 1000;
     }
     
     .nav-links.active {
         display: flex;
     }
     
+    .nav-links a {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--light);
+    }
+    
     .mobile-menu-toggle {
         display: block;
     }
     
-    .problems-grid,
-    .features-grid {
+    .problems-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
-    .step:not(:last-child)::after {
-        display: none;
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        min-height: auto;
+    }
+    
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     h1 {
@@ -533,5 +572,18 @@ h1 .highlight {
     
     .section-title {
         font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.8rem 2rem;
+    }
+    
+    .final-cta .phone-number {
+        font-size: 1.4rem;
     }
 }
