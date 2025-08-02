@@ -94,4 +94,4 @@ Ce projet est sous license MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 ---
 
-Développé avec ❤️ pour révolutionner les cabinets dentaires français 🦷
+Développé avec ❤️ pour révolutionner les cabinets dentaires français 🦷 
