@@ -1,0 +1,30 @@
+{
+  "name": "vocalizen-landing",
+  "version": "1.0.0",
+  "description": "Landing page pour VOCALIZEN - Agent Vocal IA pour Cabinets Dentaires",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080",
+    "dev": "npx live-server",
+    "build": "echo 'No build process required for static site'",
+    "test": "echo 'No tests configured'"
+  },
+  "keywords": [
+    "vocalizen",
+    "agent-ia",
+    "dentiste",
+    "landing-page",
+    "vocal-ai"
+  ],
+  "author": "VOCALIZEN Team",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/votre-username/vocalizen-landing.git"
+  },
+  "homepage": "https://vocalizen.fr"
+}

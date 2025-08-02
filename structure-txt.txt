@@ -1,0 +1,52 @@
+STRUCTURE DES FICHIERS POUR GITHUB
+==================================
+
+Créez les dossiers et fichiers suivants :
+
+vocalizen-landing/
+│
+├── index.html          # Fichier principal (copier le contenu de "index.html")
+│
+├── css/                # Créer ce dossier
+│   ├── styles.css      # Copier le contenu de "css/styles.css"
+│   └── animations.css  # Copier le contenu de "css/animations.css"
+│
+├── js/                 # Créer ce dossier
+│   └── main.js         # Copier le contenu de "js/main.js"
+│
+├── README.md           # Copier le contenu de "README.md"
+├── package.json        # Copier le contenu de "package.json"
+├── .gitignore          # Copier le contenu de ".gitignore"
+│
+└── img/                # Créer ce dossier (optionnel)
+    └── (vos images)    # Ajouter vos images ici si nécessaire
+
+
+INSTRUCTIONS D'INSTALLATION :
+============================
+
+1. Créez un nouveau repository sur GitHub
+2. Clonez le repository sur votre machine
+3. Créez la structure de dossiers ci-dessus
+4. Copiez le contenu de chaque artifact dans les fichiers correspondants
+5. Committez et pushez vers GitHub :
+
+   git add .
+   git commit -m "Initial commit - VOCALIZEN landing page"
+   git push origin main
+
+6. Activez GitHub Pages dans les settings du repository
+7. Votre site sera accessible à : https://votre-username.github.io/vocalizen-landing/
+
+
+COMMANDES UTILES :
+==================
+
+# Lancer en local avec npm
+npm install
+npm start
+
+# Ou avec Python
+python -m http.server 8000
+
+# Ou simplement ouvrir index.html dans le navigateur
