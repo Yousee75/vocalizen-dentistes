@@ -119,20 +119,30 @@ nav {
 /* ===== HERO SECTION ===== */
 .hero {
     padding: 120px 20px 80px;
-    background: linear-gradient(to bottom, #F0F9FF, #FFFFFF);
+    background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 50%, #F0F9FF 100%);
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-.hero-bg-animation {
+.hero-bg-pattern {
     position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
-    opacity: 0.05;
-    animation: rotate 30s linear infinite;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
 }
 
 h1 {
@@ -153,7 +163,28 @@ h1 .highlight {
     color: var(--gray);
     text-align: center;
     max-width: 800px;
-    margin: 0 auto 3rem;
+    margin: 0 auto 2rem;
+}
+
+.hero-features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.feature-item {
+    color: var(--dark);
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.feature-separator {
+    color: var(--gray);
+    opacity: 0.4;
 }
 
 .cta-container {
@@ -162,47 +193,45 @@ h1 .highlight {
 }
 
 .cta-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     background: var(--primary);
     color: white;
-    padding: 1rem 2.5rem;
-    border-radius: 8px;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.2rem;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.25);
+    gap: 1rem;
 }
 
-.cta-button::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
+.cta-icon {
+    font-size: 1.3rem;
 }
 
-.cta-button:hover::before {
-    width: 300px;
-    height: 300px;
+.cta-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+}
+
+.cta-main {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.cta-phone {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .cta-button:hover {
     background: #1D4ED8;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
-}
-
-.trial-text {
-    text-align: center;
-    color: var(--gray);
-    margin-bottom: 1rem;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.35);
 }
 
 .trust-badge {
@@ -553,6 +582,45 @@ h1 .highlight {
         display: block;
     }
     
+    .hero {
+        min-height: auto;
+        padding: 100px 20px 60px;
+    }
+    
+    .hero-features {
+        font-size: 0.9rem;
+    }
+    
+    .feature-separator {
+        display: none;
+    }
+    
+    .feature-item {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .cta-button {
+        padding: 1rem 1.5rem;
+    }
+    
+    .cta-text {
+        align-items: center;
+    }
+    
+    .cta-icon {
+        font-size: 1.2rem;
+    }
+    
+    .cta-main {
+        font-size: 0.95rem;
+    }
+    
+    .cta-phone {
+        font-size: 1rem;
+    }
+    
     .problems-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -584,12 +652,19 @@ h1 .highlight {
         font-size: 1.1rem;
     }
     
-    .cta-button {
-        font-size: 1rem;
-        padding: 0.8rem 2rem;
-    }
-    
     .final-cta .phone-number {
         font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .cta-button {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+    }
+    
+    .cta-text {
+        text-align: center;
     }
 }
